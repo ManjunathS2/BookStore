@@ -7,12 +7,11 @@ function Logout() {
     const handleLogout = () => {
         try {
             setAuthUser(null);
-            // Ensure this key matches what you used in Login.jsx (see suggestion #1)
+            
             localStorage.removeItem("user"); 
             alert("Logout Successful");
             
-            // Optional: Reload to clear any other state/cache
-            // window.location.reload(); 
+        
         } catch (error) {
             alert("Error during logout. Please try again.");
         }

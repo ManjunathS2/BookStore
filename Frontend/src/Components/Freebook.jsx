@@ -12,8 +12,7 @@ function Freebook() {
     const getBooks = async () => {
       try {
         const res = await axios.get("http://localhost:4001/book");
-        // Logic note: You are filtering here but not using the filtered variable below.
-        // See 'Suggestions' section for the fix.
+        
         const data = res.data.filter((book) => book.category === "Free");
         console.log(data);
         setBooks(data); 

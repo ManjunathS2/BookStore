@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Login from "./Login";
-import { useAuth } from "../context/authProvider";
 import Logout from "./Logout";
+import { useAuth } from "../context/authProvider";
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
@@ -84,7 +84,6 @@ function Navbar() {
               <ul className="menu menu-horizontal px-1">{navItems}</ul>
             </div>
 
-            {/* Search Bar - Hidden on very small screens (mobile) to save space, visible on sm+ */}
             <div className="hidden sm:block">
               <label className="input input-bordered flex items-center gap-2">
                 <input
@@ -107,14 +106,14 @@ function Navbar() {
               </label>
             </div>
 
-            {/* Theme Controller */}
+      
             <label className="swap swap-rotate">
               <input
                 type="checkbox"
                 className="theme-controller"
                 value="synthwave"
               />
-              {/* Sun Icon */}
+             
               <svg
                 className="swap-off fill-current w-7 h-7"
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +121,6 @@ function Navbar() {
               >
                 <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,4.93l.71.71A1,1,0,0,0,5.64,7.05Zm12,1.41a1,1,0,0,0,.7.29l.71-.71a1,1,0,0,0,0-1.41l-.71-.71a1,1,0,0,0-1.41,0l-.71.71A1,1,0,0,0,17.64,8.46Zm1.41,8.49a1,1,0,0,0,0-1.41l-.71-.71a1,1,0,0,0-1.41,0l-.71.71a1,1,0,0,0,0,1.41l.71.71a1,1,0,0,0,1.41,0ZM21,12a1,1,0,0,0-1-1H19a1,1,0,0,0,0,2h1A1,1,0,0,0,21,12ZM12,19a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM12,7a5,5,0,1,0,5,5A5,5,0,0,0,12,7Z" />
               </svg>
-              {/* Moon Icon */}
               <svg
                 className="swap-on fill-current w-7 h-7"
                 xmlns="http://www.w3.org/2000/svg"

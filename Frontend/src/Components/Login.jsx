@@ -23,9 +23,9 @@ function Login() {
           alert("Login Successful!");
         }
         localStorage.setItem("user", JSON.stringify(response.data.user));
-        // Close modal
+  
         document.getElementById("my_modal_3").close();
-        // Optional: Reload page to update Navbar state immediately
+
         window.location.reload();
       })
       .catch((error) => {
@@ -39,11 +39,10 @@ function Login() {
 
   return (
     <div>
-      {/* Changed ID to my_modal_3 to match the Navbar call in previous steps */}
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box w-11/12 max-w-md p-6 md:p-8 dark:bg-slate-900 dark:text-white">
           <form onSubmit={handleSubmit(onSubmit)} method="dialog">
-            {/* Close Button - Now just closes modal without redirecting, unless you specifically need redirect */}
+           
             <Link
               to="/"
               className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
@@ -55,7 +54,7 @@ function Login() {
             <h3 className="font-bold text-2xl text-center mb-6">Login</h3>
 
             <div className="flex flex-col gap-4">
-              {/* Email Field */}
+        
               <div className="space-y-2">
                 <span className="font-medium">Email</span>
                 <input
@@ -71,7 +70,7 @@ function Login() {
                 )}
               </div>
 
-              {/* Password Field */}
+        
               <div className="space-y-2">
                 <span className="font-medium">Password</span>
                 <input
@@ -88,7 +87,7 @@ function Login() {
               </div>
             </div>
 
-            {/* Button Section */}
+    
             <div className="flex flex-col sm:flex-row justify-between items-center mt-8 gap-4">
               <button className="w-full sm:w-auto bg-pink-500 text-white rounded-md px-6 py-2 hover:bg-pink-700 duration-200">
                 Login

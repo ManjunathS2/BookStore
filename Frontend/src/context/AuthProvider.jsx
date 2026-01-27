@@ -3,7 +3,7 @@ import { createContext, useState ,useContext } from 'react';
 
 export const AuthContext = createContext();
 
-function authProvider({children}) {
+function AuthProvider({children}) {
     const initialAuthUser= JSON.parse(localStorage.getItem("user")) || null;
     const [authUser,setAuthUser]=useState(initialAuthUser);
 
@@ -15,4 +15,4 @@ function authProvider({children}) {
 }
 
 export const useAuth=()=>useContext(AuthContext);
-export default authProvider
+export default AuthProvider

@@ -40,7 +40,7 @@ function Course() {
           
         </div>
 
-        {/* Grid Layout: 1 col mobile, 2 col tablet, 3 col desktop, 4 col large screens */}
+      
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {books.map((items) => {
             return <Card items={items} key={items.id} />;

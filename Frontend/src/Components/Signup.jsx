@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import Login from "./Login"; // Assuming you might want to trigger the modal, see suggestions below
+import Login from "./Login"; 
 
 function Signup() {
   const navigate=useNavigate()
@@ -38,9 +38,9 @@ function Signup() {
   return (
     <>
       <div className="flex justify-center items-center h-screen dark:bg-slate-900">
-        {/* Responsive Container: w-full on mobile, max-w-md on desktop */}
+       
         <div className="w-full max-w-md p-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg border dark:border-slate-700 relative">
-          {/* Close Button (Optional: Redirects to Home) */}
+   
           <Link
             to="/"
             className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 dark:text-white"
@@ -52,16 +52,16 @@ function Signup() {
             Signup
           </h3>
 
-          {/* FORM START */}
+  
           <form onSubmit={handleSubmit(onSubmit)}>
-            {/* Name */}
+      
             <div className="mb-4 space-y-2">
               <label className="dark:text-white font-medium">Name</label>
               <input
                 type="text"
                 placeholder="Enter your name"
                 className="w-full px-3 py-2 border rounded-md outline-none focus:border-pink-500 transition-colors dark:bg-slate-900 dark:border-slate-600 dark:text-white"
-                // Fixed logic error: used errors.name, not errors.fullname
+         
                 {...register("name", { required: "Name is required" })}
               />
               {errors.name && (
@@ -71,7 +71,7 @@ function Signup() {
               )}
             </div>
 
-            {/* Email */}
+         
             <div className="mb-4 space-y-2">
               <label className="dark:text-white font-medium">Email</label>
               <input
@@ -93,7 +93,7 @@ function Signup() {
               )}
             </div>
 
-            {/* Password */}
+         
             <div className="mb-6 space-y-2">
               <label className="dark:text-white font-medium">Password</label>
               <input
@@ -115,11 +115,10 @@ function Signup() {
               )}
             </div>
 
-            {/* Buttons */}
             <div className="flex justify-between items-center">
               <p className="text-sm dark:text-gray-300">
                 Have an account?{" "}
-                {/* Changed button to a text link style to match Login modal aesthetics */}
+                
                 <button
                   className="underline text-blue-500 cursor-pointer hover:text-blue-700"
                   onClick={() =>
@@ -128,7 +127,7 @@ function Signup() {
                 >
                   Login
                 </button>
-                {/* Note: Logic kept as requested, but see suggestion #2 regarding the actual modal */}
+            
                 <Login />
               </p>
 
@@ -140,7 +139,7 @@ function Signup() {
               </button>
             </div>
           </form>
-          {/* FORM END */}
+    
         </div>
       </div>
     </>
