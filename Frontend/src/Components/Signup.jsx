@@ -19,8 +19,8 @@ function Signup() {
       password: data.password,
     };
     await axios
-      // .post("http://localhost:4001/user/register", userinfo)\
-      .post("https://bookstore-2-sulb.onrender.com/user/register", userinfo)
+      .post("http://localhost:4001/user/register", userinfo)
+      // .post("https://bookstore-2-sulb.onrender.com/user/register", userinfo)
 
       .then((response) => {
         console.log("User registered successfully:", response.data);
