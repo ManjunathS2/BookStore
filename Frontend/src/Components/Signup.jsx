@@ -20,7 +20,7 @@ function Signup() {
     };
     await axios
       // .post("http://localhost:4001/user/register", userinfo)\
-      .post("https://book-store-5oz7.vercel.app/signup", userinfo)
+      .post("https://bookstore-2-sulb.onrender.com//user/signup", userinfo)
 
       .then((response) => {
         console.log("User registered successfully:", response.data);
