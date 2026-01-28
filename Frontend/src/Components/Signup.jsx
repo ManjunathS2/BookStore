@@ -20,7 +20,7 @@ function Signup() {
     };
     await axios
       // .post("http://localhost:4001/user/register", userinfo)\
-      .post("https://bookstore-2-sulb.onrender.com//user/register", userinfo)
+      .post("https://bookstore-2-sulb.onrender.com/user/register", userinfo)
 
       .then((response) => {
         console.log("User registered successfully:", response.data);
