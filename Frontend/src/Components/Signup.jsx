@@ -19,7 +19,9 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post("http://localhost:4001/user/register", userinfo)
+      // .post("http://localhost:4001/user/register", userinfo)\
+      .post("https://book-store-5oz7.vercel.app/signup", userinfo)
+
       .then((response) => {
         console.log("User registered successfully:", response.data);
         if (response.data) {
